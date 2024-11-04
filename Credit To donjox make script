@@ -1,0 +1,15 @@
+if  game.PlaceId ~= 17290438723 then
+game:GetService("TeleportService"):Teleport(17290438723)
+elseif game.PlaceId == 17290438723 then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-558, 182, 54)
+local function fireAllProximityPrompts()
+    for _, descendant in ipairs(workspace:GetDescendants()) do
+        if descendant:IsA("ProximityPrompt") then
+            fireproximityprompt(descendant)
+        end
+    end
+end
+
+-- Trigger all ProximityPrompts
+fireAllProximityPrompts()
+end
